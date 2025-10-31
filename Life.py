@@ -12,7 +12,7 @@ Exercises
 """
 
 from random import choice
-from turtle import *
+import turtle as ttl
 
 from freegames import square
 
@@ -53,17 +53,17 @@ def step():
 def draw():
     """Draw all the squares."""
     step()
-    clear()
+    ttl.clear()
     for (x, y), alive in cells.items():
         color = 'green' if alive else 'black'
         square(x, y, 10, color)
-    update()
-    ontimer(draw, 100)
+    ttl.update()
+    ttl.ontimer(draw, 100)
 
 
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
+ttl.setup(420, 420, 370, 0)
+ttl.hideturtle()
+ttl.tracer(False)
 initialize()
 draw()
-done()
+ttl.done()
