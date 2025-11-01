@@ -55,12 +55,12 @@ def draw():
     step()
     ttl.clear()
     for (x, y), alive in cells.items():
-        color = 'green' if alive else 'black'
+        color = 'blue' if alive else 'red'
         square(x, y, 10, color)
     ttl.update()
     ttl.ontimer(draw, 100)
 
-
+ttl.title("Life - Modificado por Luis Gutiérrez")
 ttl.setup(420, 420, 370, 0)
 ttl.hideturtle()
 ttl.tracer(False)
